@@ -1,0 +1,24 @@
+{
+  "name": "node-execSync",
+  "version": "0.0.1",
+  "author": {
+    "name": "hecomi",
+    "email": "info@hecomi.com"
+  },
+  "main": "mecab",
+  "dependencies": {},
+  "readmeFilename": "README.md",
+  "description": "synchronous exec command",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hecomi/node-execsync.git"
+  },
+  "bugs": {
+    "mail": "info@hecomi.com",
+    "url": "http://github.com/hecomi/node-execsync/issues"
+  },
+  "scripts": {
+    "install": "node-gyp rebuild",
+  },
+  "gypfile": true
+}

@@ -12,20 +12,22 @@ NYSL ライセンスです。
 
 インストール
 --------------
-git clone して次のコマンドを実行して下さい。
+以下のコマンドを実行して下さい。
 
-	$ node-waf configure build
-
-wscript ファイル内の gcc のバージョンは適宜変更して下さい。デフォルトでは、g++-4.8 でコンパイルしています。
+```
+$ npm install node-execSync
+```
 
 使い方
 --------------
 次のように使います。
 
-	var exec = require('./build/Release/shell').execSync;
-	console.log(exec('ls -all'));
+```javascript
+var execSync = require('node-execSync');
+console.log(exec('ls'));
+```
 
 詳細
 --------------
-その他詳細は http://d.hatena.ne.jp/hecomi/ をご参照下さい。
+その他詳細は Twitter:@hecomi へご質問いただくか、http://d.hatena.ne.jp/hecomi/ をご参照下さい。
 

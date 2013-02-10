@@ -1,4 +1,14 @@
-var exec = require('./build/Release/shell').execSync;
+var fs   = require('fs')
+  , path = require('path')
+  , execSync
+;
 
-console.log(exec('ls -all'));
+if ( fs.existsSync( path.join(__dirname, './build/Debug') ) ) {
+	execSync = require('./build/Debug/shell').execSync;
+} else if ( fs.existsSync( path.join(__dirname, './build/Release') ) ) {
+	execSync = require('./build/Release/shell').execSync;
+} else {
+	throw '"node-execSync" has not been compiled yet.'
+}
 
+module.exports = execSync;

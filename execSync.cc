@@ -37,9 +37,6 @@ Handle<Value> execSync(const Arguments& args)
 	return scope.Close(String::New(result.c_str()));
 }
 
-/**
- * Node.js の世界へいってらっしゃい
- */
 void init(Handle<Object> target) {
 	target->Set(
 		String::NewSymbol("execSync"),
