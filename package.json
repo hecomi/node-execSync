@@ -1,5 +1,5 @@
 {
-  "name": "node-execSync",
+  "name": "execsync",
   "version": "0.0.1",
   "author": {
     "name": "hecomi",
@@ -18,7 +18,7 @@
     "url": "http://github.com/hecomi/node-execsync/issues"
   },
   "scripts": {
-    "install": "node-gyp rebuild",
+    "install": "node-gyp rebuild"
   },
   "gypfile": true
 }

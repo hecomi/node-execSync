@@ -1,9 +1,9 @@
-node-execSync
+node-execsync
 ==============
 
 はじめに
 --------------
-node.js の child_process 下の exec 関数の同期版です。
+node.js の exec の同期版です。
 shell のコマンドを引数で指定して実行して、その実行結果を戻り値で返してくれます。
 
 ライセンス
@@ -15,7 +15,7 @@ NYSL ライセンスです。
 以下のコマンドを実行して下さい。
 
 ```
-$ npm install node-execSync
+$ npm install execsync
 ```
 
 使い方
@@ -23,8 +23,8 @@ $ npm install node-execSync
 次のように使います。
 
 ```javascript
-var execSync = require('node-execSync');
-console.log(exec('ls'));
+var execSync = require('execsync');
+console.log(execSync('ls'));
 ```
 
 詳細

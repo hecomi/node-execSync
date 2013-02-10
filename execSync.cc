@@ -15,7 +15,7 @@ Handle<Value> execSync(const Arguments& args)
 
 	// 引数が文字列かどうかチェック
 	if (!args[0]->IsString()) {
-		Local<String> msg = String::New("[execSync] Error! Argument of 'execSync' must be String.");
+		Local<String> msg = String::New("Argument of 'execsync' must be String.");
 		ThrowException(Exception::TypeError(msg));
 		return scope.Close(Undefined());
 	}
@@ -23,7 +23,7 @@ Handle<Value> execSync(const Arguments& args)
 
 	FILE *fp = popen(*command, "r");
 	if (fp == nullptr) {
-		Local<String> msg = String::New("[execSync] Error! 'popen' failed.");
+		Local<String> msg = String::New("'popen' in 'execsync' failed.");
 		ThrowException(Exception::TypeError(msg));
 		return scope.Close(Undefined());
 	}
