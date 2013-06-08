@@ -1,7 +1,7 @@
 {
 	'targets': [{
 		'target_name' : 'shell',
-		'sources'     : [ 'execSync.cc' ],
+		'sources'     : [ 'execsync.cc' ],
 		'cflags'      : [ '-std=c++0x' ],
 		'libraries'   : [ '-lboost_iostreams' ],
 		'conditions'  : [

@@ -1,11 +1,11 @@
 {
   "name": "execsync",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "hecomi",
     "email": "info@hecomi.com"
   },
-  "main": "mecab",
+  "main": "execsync",
   "dependencies": {},
   "readmeFilename": "README.md",
   "description": "synchronous exec command",

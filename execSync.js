@@ -8,7 +8,7 @@ if ( fs.existsSync( path.join(__dirname, './build/Debug') ) ) {
 } else if ( fs.existsSync( path.join(__dirname, './build/Release') ) ) {
 	execSync = require('./build/Release/shell').execSync;
 } else {
-	throw '"node-execSync" has not been compiled yet.'
+	throw '"execsync" has not been compiled yet.'
 }
 
 module.exports = execSync;
