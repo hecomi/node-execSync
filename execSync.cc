@@ -13,11 +13,13 @@ Handle<Value> execSync(const Arguments& args)
 		ThrowException(Exception::TypeError(msg));
 		return scope.Close(Undefined());
 	}
-	String::Utf8Value command(args[0]);
 
-	FILE *fp = popen(*command, "r");
+	const String::Utf8Value utf8_command(args[0]);
+	const std::string command = std::string(*utf8_command) + " 2>&1";
+
+	FILE *fp = popen(command.c_str(), "r");
 	if (fp == NULL) {
-		Local<String> msg = String::New("'popen' in 'execSync' failed.");
+		Local<String> msg = String::New("'popen' in 'execsync' failed.");
 		ThrowException(Exception::TypeError(msg));
 		return scope.Close(Undefined());
 	}
