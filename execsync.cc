@@ -15,7 +15,7 @@ Handle<Value> execSync(const Arguments& args)
 	}
 
 	const String::Utf8Value utf8_command(args[0]);
-	const std::string command = std::string(*utf8_command) + " 2>&1";
+	const std::string command = "{ " + std::string(*utf8_command) + "; } 2>&1";
 
 	FILE *fp = popen(command.c_str(), "r");
 	if (fp == NULL) {
